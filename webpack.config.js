@@ -9,6 +9,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[name][ext]',
     clean: true,
   },
   devServer: {
@@ -17,6 +18,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.html$/i,
+        use: 'html-loader'
+    },
       {
         test: /\.s[ac]ss$/i,
         use: [
@@ -29,7 +34,7 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name][ext]'
+          filename: 'images/[name][ext]',
         }
       },
       {
