@@ -204,3 +204,9 @@ async function initMap() {
     }
     createMarkers(markers, map);
 }
+
+$('.features__slider').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
