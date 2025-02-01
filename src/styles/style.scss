@@ -1,58 +1,14 @@
 @use 'fonts';
 @use 'variables' as *;
+@use 'intro';
+@use 'location';
 
-.location__map {
-    width: 375px;
-    height: 446px;
-}
-
-.location__marker {
-    width: 36px;
-    height: 36px;
-    background-color: $purple;
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(122, 27, 27, 0.2);
-    background-position: center;
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-}
-
-.location__marker--shop {
-    background-image: url('../images/shop.svg');
-}
-
-.location__marker--cafe {
-    background-image: url('../images/cafe.svg');
-}
-
-.location__marker--cinema {
-    background-image: url('../images/cinema.svg');
-}
-
-.location__marker--main {
-    background-image: url('../images/main-pin.svg');
-}
-
-.location__marker--child {
-    background-image: url('../images/child.svg');
-}
-
-.location__marker--health {
-    background-image: url('../images/health.svg');
-}
-
-.location__marker--beauty {
-    background-image: url('../images/beauty.svg');
-}
-
-.location__marker--education {
-    background-image: url('../images/education.svg');
-}
-
-.location__marker--hidden {
-    display: none;
-}
-
-.location__filter--inactive {
-    opacity: 0.5;
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-dark;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

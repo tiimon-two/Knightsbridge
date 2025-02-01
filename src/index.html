@@ -7,8 +7,6 @@
     <meta name="author" content="Порубов Артём">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="../node_modules/slick-slider/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="../node_modules/slick-slider/slick/slick-theme.css" /> -->
     <title>Knightsbridge private park</title>
     <script src="https://api-maps.yandex.ru/v3/?apikey=f32f3eba-0a5b-46ce-b769-e5e3dfba352d&lang=ru_RU"></script>
 </head>
@@ -18,39 +16,43 @@
             <section class="intro">
                 <h2 class="intro__title">Knightsbridge private park – элитный район Лондона в центре Москвы</h2>
                 <div class="intro__info">
-                    <ul class="intro__data-list">
-                        <li class="intro__data-item">
-                            <p class="intro__count">156 - 636 м<sup>2</sup></p>
-                            <p class="intro__description">Площадь квартир</p>
-                        </li>
-                        <li class="intro__data-item">
-                            <p class="intro__count">475</p>
-                            <p class="intro__description">Парковочных мест</p>
-                        </li>
-                        <li class="intro__data-item">
-                            <p class="intro__count">10 мин</p>
-                            <p class="intro__description">До метро Фрунзенская</p>
-                        </li>
-                        <li class="intro__data-item">
-                            <p class="intro__count">2 га</p>
-                            <p class="intro__description">Площадь собственного парка</p>
-                        </li>
-                    </ul>
-                    <p class="intro__text">
-                        Жилой комплекс из четырех клубных домов класса де-люкс в английском стиле, расположенный в собственном парке площадью 3 га в районе Хамовники.
-                        Авторы интерьеров жилого копмлекса,и дизайна частного парка – дизайнеры мировой величины. Так, общественные зоны оформляет Дэвид Линли, племянник королевы Великобритании и
-                        глава компании LINLEY, а настоящий английский парк для жителей
-                    </p>
+                    <div class="intro__wrapper">
+                        <ul class="intro__data-list">
+                            <li class="intro__data-item">
+                                <p class="intro__count">180 - 2048 <span>м<sup>2</sup></span></p>
+                                <p class="intro__description">Площадь объектов</p>
+                            </li>
+                            <li class="intro__data-item">
+                                <p class="intro__count intro__count--special">499</p>
+                                <p class="intro__description">Парковочных мест</p>
+                            </li>
+                            <li class="intro__data-item">
+                                <p class="intro__count">10 <span>мин</span></p>
+                                <p class="intro__description">До метро Фрунзенская</p>
+                            </li>
+                            <li class="intro__data-item">
+                                <p class="intro__count">2 га</p>
+                                <p class="intro__description">Площадь собственного парка</p>
+                            </li>
+                        </ul>
+                        <p class="intro__text">
+                            Жилой комплекс из четырех клубных домов класса де-люкс в английском стиле, расположенный в собственном парке площадью 3 га в районе Хамовники.
+                            Авторы интерьеров жилого копмлекса,и дизайна частного парка – дизайнеры мировой величины. Так, общественные зоны оформляет Дэвид Линли, племянник королевы Великобритании и
+                            глава компании LINLEY, а настоящий английский парк для жителей
+                        </p>
+                    </div>
                     <button class="intro__more-button">Узнать подробнее</button>
                 </div>
                 <div class="intro__demonstation">
                     <picture>
                         <source media="(min-width: 1440px)" srcset="images/placeholder-desktop.svg">
                         <source media="(min-width: 768px)" srcset="images/placeholder-tablet.svg">
-                        <img src="images/placeholder.svg" alt="Описание изображения">
+                        <img class="intro__image" src="images/placeholder.svg" alt="Описание изображения">
                     </picture>
-                    <button class="intro__doc-button">Презентация ЖК Knightsbridge Private Рark</button>
-                    <button class="intro__doc-button intro__doc-button--dark">Типы планировок апартаментов</button>
+                    <div class="intro__container">
+                        <button class="intro__doc-button">Презентация<br/> ЖК Knightsbridge Private Рark</button>
+                        <button class="intro__doc-button intro__doc-button--dark">Типы планировок апартаментов</button>
+                    </div>
                 </div>
             </section>
             <section class="location">

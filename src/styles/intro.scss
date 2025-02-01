@@ -1,0 +1,249 @@
+@use 'variables' as *;
+
+.intro {
+    position: relative;
+    padding: 0 12px 0;
+    background-color: $light;
+
+    &__title {
+        font-family: 'Baron Neue', 'Arial', sans-serif;
+        font-size: 32px;
+        line-height: 44px;
+        margin: 0 -12px 0;
+        padding: 26px 12px 36px;
+        background-color: $white;
+    }
+
+    &__info {
+        padding: 44px 0 503px 0;
+    }
+
+    &__data-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    &__data-item {
+        margin-bottom: 28px;
+
+        &:nth-child(odd) {
+            margin-right: 56px;
+        }
+
+        &:nth-child(n + 4) {
+            display: none;
+        }
+    }
+
+    &__count {
+        margin: 0 0 2px 0;
+        font-size: 30px;
+        line-height: 24px;
+        letter-spacing: -1.5px;
+        font-weight: 700;
+
+        &--special {
+            margin-bottom: 8px;
+        }
+    }
+
+    span {
+        font-size: 16px;
+    }
+
+    sup {
+        padding-left: 2px;
+        font-size: 12px;
+    }
+
+    &__description {
+        margin: 0;
+        font-size: 14px;
+        line-height: 26px;
+        color: $gray-light;
+    }
+
+    &__text {
+        margin: 0 0 34px 0;
+    }
+
+    &__more-button {
+        position: relative;
+        padding: 0;
+        font-size: 16px;
+        line-height: 20px;
+        color: $bardo;
+        text-transform: uppercase;
+        letter-spacing: -0.7px;
+        border: none;
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $bardo;
+        }
+    }
+
+    &__demonstation {
+        position: absolute;
+        bottom: -70px;
+        left: 12px;
+    }
+
+    &__image {
+        object-fit: contain;
+    }
+
+    &__container {
+        display: flex;
+        column-gap: 14px;
+        margin-top: 7px;
+    }
+
+    &__doc-button {
+        display: flex;
+        align-items: flex-end;
+        width: calc(50% - 15px);
+        max-width: 236px;
+        min-height: 180px;
+        padding: 0 19px 22px;
+        border: none;
+        line-height: 20px;
+        letter-spacing: -0.6px;
+        color: $white;
+        background-color: $purple;
+        background-image: url('../images/book.png');
+        background-repeat: no-repeat;
+        background-position: 0 -20px;
+        background-size: 112%;
+
+        &--dark {
+            background-color: $dark;
+            background-position: 0 -26px;
+        }
+    }
+
+    @media (min-width: 562px) {
+        &__data-item {
+            &:nth-child(even) {
+                margin-right: 56px;
+            }
+        }
+    }
+
+    @media (min-width: $tablet) {
+        padding: 0 34px;
+
+        &__title {
+            font-size: 36px;
+            margin: 0 -34px;
+            padding: 48px 144px 40px 34px;
+        }
+
+        &__info {
+            padding-top: 50px;
+            padding-bottom: 720px;
+        }
+
+        &__wrapper {
+            display: flex;
+            column-gap: 144px;
+            margin-bottom: 28px;
+        }
+
+        &__data-list {
+            flex-direction: column;
+            padding-top: 8px;
+        }
+
+        &__data-item {
+            margin-bottom: 38px;
+
+            &:nth-child(odd),
+            &:nth-child(even) {
+                margin-right: 0;
+            }
+        }
+
+        &__text {
+            width: 46%;
+        }
+
+        &__more-button {
+            letter-spacing: 1px;
+        }
+
+        &__demonstation {
+            bottom: -60px;
+            left: 38px;
+        }
+
+        &__container {
+            margin-top: 24px;
+            column-gap: 30px;
+        }
+
+        &__doc-button {
+            min-height: 210px;
+            padding: 0 32px 32px;
+
+            &--dark {
+                padding-bottom: 44px;
+            }
+        }
+
+        &__doc-button,
+        &__doc-button--dark {
+            background-position: -8px -54px;
+        }
+    }
+
+    @media (min-width: $desktop) {
+        padding-left: 120px;
+
+        &__title {
+            padding: 68px 778px 58px 120px;
+            margin-left: -120px;
+        }
+
+        &__info {
+            padding: 68px 0 10px 0;
+        }
+
+        &__wrapper {
+            column-gap: 60px;
+        }
+
+        &__data-item {
+            &:nth-child(n + 4) {
+                display: block;
+            }
+        }
+
+        &__text {
+            width: 25%;
+        }
+
+        &__more-button {
+            display: none;
+        }
+
+        &__demonstation {
+            top: 80px;
+            right: 0;
+            bottom: initial;
+            left: initial;
+        }
+
+        &__container {
+            column-gap: 24px;
+        }
+    }
+}
