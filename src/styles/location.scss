@@ -1,67 +1,135 @@
 @use 'variables' as *;
 
 .location {
-    padding-top: 148px;
-}
+    padding: 138px 12px 0;
 
-.location__map {
-    width: 375px;
-    height: 446px;
-}
+    &__title {
+        font-family: 'Baron Neue', 'Arial', sans-serif;
+        font-size: 36px;
+        line-height: 44px;
+        font-weight: 400;
+        margin: 0 0 30px 0;
+        padding: 0;
+    }
 
-.location__marker {
-    width: 36px;
-    height: 36px;
-    background-color: $purple;
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(122, 27, 27, 0.2);
-    background-position: center;
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-}
+    &__marker {
+        width: 36px;
+        height: 36px;
+        background-color: $purple;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px rgba(122, 27, 27, 0.2);
+        background-position: center;
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
 
-.location__marker--shop {
-    background-image: url('../images/shop.svg');
-}
+        &--shop {
+            background-image: url('../images/shop.svg');
+        }
 
-.location__marker--cafe {
-    background-image: url('../images/cafe.svg');
-}
+        &--cafe {
+            background-image: url('../images/cafe.svg');
+        }
 
-.location__marker--cinema {
-    background-image: url('../images/cinema.svg');
-}
+        &--cinema {
+            background-image: url('../images/cinema.svg');
+        }
 
-.location__marker--main {
-    background-image: url('../images/main-pin.svg');
-}
+        &--main {
+            background-image: url('../images/main-pin.svg');
+        }
 
-.location__marker--child {
-    background-image: url('../images/child.svg');
-}
+        &--child {
+            background-image: url('../images/child.svg');
+        }
 
-.location__marker--health {
-    background-image: url('../images/health.svg');
-}
+        &--health {
+            background-image: url('../images/health.svg');
+        }
 
-.location__marker--beauty {
-    background-image: url('../images/beauty.svg');
-}
+        &--beauty {
+            background-image: url('../images/beauty.svg');
+        }
 
-.location__marker--education {
-    background-image: url('../images/education.svg');
-}
+        &--education {
+            background-image: url('../images/education.svg');
+        }
 
-.location__marker--hidden {
-    display: none;
-}
+        &--hidden {
+            display: none;
+        }
+    }
 
-.location__filter--inactive {
-    opacity: 0.5;
-}
+    &__filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px 14px;
+        margin-bottom: 35px;
+    }
 
-@media (min-width: $tablet) {
-    .location {
-        padding-top: 142px;
+    &__filter {
+        font-family: 'Lato', 'Arial', sans-serif;
+        font-size: 11px;
+        line-height: 26px;
+        text-transform: uppercase;
+        padding: 0 22px;
+        border: 1px solid $purple;
+        border-radius: 20px;
+
+        &--inactive {
+        opacity: 0.5;
+        }
+    }
+
+    &__map {
+        width: calc(100% + 24px);
+        aspect-ratio: 375 / 446;
+        max-height: 450px;
+    }
+
+    @media (min-width: $tablet) {
+        padding: 148px 40px 0;
+
+        &__title {
+            margin-bottom: 26px;
+        }
+
+        &__filters {
+            row-gap: 12px;
+        }
+
+        &__map {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: $desktop) {
+        padding: 190px 120px 0;
+        display: grid;
+        grid-template-columns: max-content 930px;
+        grid-template-rows: 44px auto;
+        gap: 36px 90px;
+
+        &__title {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            margin-bottom: 0;
+        }
+
+        &__filters {
+            grid-column: 1 / 2;
+            grid-row: 2 / -1;
+            flex-direction: column;
+            row-gap: 18px;
+        }
+
+        &__filter {
+            width: max-content;
+            text-align: left;
+        }
+
+        &__map {
+            grid-column: -1 / -2;
+            grid-row: 1 / -1;
+        }
     }
 }

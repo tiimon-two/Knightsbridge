@@ -25,7 +25,7 @@ const markers = [
     },
     {
         type: 'main',
-        coords: [37.535652, 55.746909]
+        coords: [37.534652, 55.747409]
     },
     {
         type: 'health',
@@ -33,7 +33,7 @@ const markers = [
     },
     {
         type: 'child',
-        coords: [37.538698, 55.747278]
+        coords: [37.536898, 55.747278]
     },
     {
         type: 'shop',
@@ -53,11 +53,11 @@ const markers = [
     },
     {
         type: 'health',
-        coords: [37.537415, 55.747909]
+        coords: [37.536015, 55.747909]
     },
     {
         type: 'cafe',
-        coords: [37.541771, 55.747343]
+        coords: [37.538371, 55.747343]
     },
     {
         type: 'shop',

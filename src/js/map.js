@@ -7,8 +7,8 @@ export default async function initMap(markers) {
         document.querySelector('.location__map'),
         {
             location: {
-                center: [37.532701, 55.747147],
-                zoom: 15,
+                center: [37.534652, 55.746409],
+                zoom: 16,
                 controls: []
             }
         }
