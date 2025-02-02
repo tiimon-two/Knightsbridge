@@ -5,7 +5,7 @@ import initMap from './map.js';
 import setDownload from './download.js';
 import { disableLink } from './utils.js';
 
-const buttons = document.querySelectorAll('.intro__doc-button');
+const buttons = document.querySelectorAll('.intro__button');
 
 setSlider();
 initMap(markers);

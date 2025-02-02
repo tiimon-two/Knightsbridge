@@ -149,7 +149,7 @@
     @media (min-width: $desktop) {
         padding: 190px 120px 0;
         display: grid;
-        grid-template-columns: max-content 930px;
+        grid-template-columns: max-content calc(100% - 270px);
         grid-template-rows: 44px auto;
         gap: 36px 90px;
 
