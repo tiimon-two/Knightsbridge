@@ -26,6 +26,9 @@ export default async function initMap(markers) {
             'relax': 0
         }
 
+        if (!Array.isArray(markers)) {
+            markers = [];
+        }
         markers.forEach(marker => {
             const content = document.createElement('div');
             content.classList.add('location__marker');
@@ -70,7 +73,7 @@ export default async function initMap(markers) {
                     filters['child']++;
                     break;
                 default:
-                    console.log("Неизвестное значение маркера!");
+                    break;
             }
 
             const mapMarker = new YMapMarker(
@@ -106,18 +109,20 @@ export default async function initMap(markers) {
                     break;
             }
 
+            if (filters[key] > 0) {
                 const filter = document.createElement('button');
                 filter.classList.add('location__filter');
-                filter.classList.add(`location__filter--${key}`);
+                filter.classList.add('location__filter--active');
                 filter.innerHTML = category + ' ' + filters[key];
                 filter.addEventListener('click', () => {
                     const markers = document.querySelectorAll(`[data-category="${key}"]`);
                     markers.forEach((marker) => {
                         marker.classList.toggle('location__marker--hidden');
                     });
-                    filter.classList.toggle('location__filter--inactive');
+                    filter.classList.toggle('location__filter--active');
                 })
                 filterList.appendChild(filter);
+            }
         }
     };
 

@@ -4,15 +4,12 @@ export default function setSlider() {
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
-        // centerMode: true,
         responsive: [
             {
                 breakpoint: 1440,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    // centerMode: true,
-                    // centerPadding: '55px',
                 }
             },
             {
@@ -20,7 +17,6 @@ export default function setSlider() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    // centerPadding: '30px',
                 }
             }
         ]

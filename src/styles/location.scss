@@ -104,9 +104,18 @@
         padding: 0 22px;
         border: 1px solid $purple;
         border-radius: 20px;
-
-        &--inactive {
+        transition: color $transition ease, opacity $transition ease;
         opacity: 0.5;
+
+        @media (hover: hover) {
+            &:hover {
+                color: $purple;
+                opacity: 1;
+            }
+        }
+
+        &--active {
+        opacity: 1;
         }
     }
 
@@ -129,15 +138,6 @@
 
         &__filter {
             cursor: pointer;
-            transition: color $transition;
-
-            &:hover {
-                color: $purple;
-            }
-
-            &:active {
-                opacity: $opacity;
-            }
         }
 
         &__map {
@@ -157,6 +157,7 @@
             grid-column: 1 / 2;
             grid-row: 1 / 2;
             margin-bottom: 0;
+            max-width: 180px;
         }
 
         &__filters {
@@ -170,6 +171,7 @@
         &__filter {
             width: max-content;
             text-align: left;
+            max-width: 180px;
         }
 
         &__map {
