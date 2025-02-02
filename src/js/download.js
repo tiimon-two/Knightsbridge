@@ -1,6 +1,4 @@
-const buttons = document.querySelectorAll('.intro__doc-button');
-
-export default function setDownload() {
+export default function setDownload(buttons) {
     buttons.forEach((button) => button.addEventListener('click', () => {
         const link = document.createElement('a');
         link.href = button.dataset.link;

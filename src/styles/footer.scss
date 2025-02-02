@@ -1,6 +1,6 @@
 @use 'variables' as *;
 
-.features {
+.footer {
     padding: 34px 0 50px 14px;
     position: relative;
 
@@ -57,7 +57,7 @@
 
     &__text {
         margin: 0 0 25px 0;
-        width: 82%;
+        width: 85%;
     }
 
     &__link {
@@ -66,6 +66,10 @@
         line-height: 24px;
         color: $bardo;
         text-decoration: none;
+    }
+
+    .slick-list {
+        padding: 0 8% 0 0;
     }
 
     @media (min-width: $tablet) {
@@ -84,10 +88,6 @@
             font-size: 22px;
         }
 
-        &__text {
-            width: 80%;
-        }
-
         &__buttons {
             position: absolute;
             top: 231px;
@@ -96,11 +96,24 @@
         }
 
         &__button {
+            cursor: pointer;
             position: relative;
             width: 14px;
             height: 9px;
+            padding-top: 20px;
             border: none;
             background-color: transparent;
+
+            &:hover {
+                &::before,
+                &::after {
+                    background-color: $gray;
+                }
+            }
+
+            &:active {
+                opacity: $opacity;
+            }
 
             &::before,
             &::after {
@@ -110,16 +123,17 @@
                 height: 2px;
                 background-color: $bardo;
                 left: 0;
+                transition: background-color $transition;
             }
 
             &::before {
                 transform: rotate(45deg);
-                top: 4px;
+                top: 14px;
             }
 
             &::after {
                 transform: rotate(-45deg);
-                top: -4px;
+                top: 6px;
             }
 
             &--prev {
@@ -129,13 +143,25 @@
             &--next {
                 &::before {
                     transform: rotate(-45deg);
-                    top: 4px;
+                    top: 14px;
                 }
 
                 &::after {
                     transform: rotate(45deg);
-                    top: -4px;
+                    top: 6px;
                 }
+            }
+        }
+
+        &__link {
+            transition: color $transition;
+
+            &:hover {
+                color: $gray;
+            }
+
+            &:active {
+                opacity: $opacity;
             }
         }
     }
@@ -148,7 +174,7 @@
         }
 
         &__text {
-            width: 65%;
+            width: 70%;
         }
 
         &__buttons {

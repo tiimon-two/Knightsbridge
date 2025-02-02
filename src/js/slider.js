@@ -1,14 +1,18 @@
 export default function setSlider() {
-    $('.features__slider').slick({
+    $('.footer__slider').slick({
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
+        arrows: false,
+        // centerMode: true,
         responsive: [
             {
                 breakpoint: 1440,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
+                    // centerMode: true,
+                    // centerPadding: '55px',
                 }
             },
             {
@@ -16,19 +20,20 @@ export default function setSlider() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    // centerPadding: '30px',
                 }
             }
         ]
     });
 
-    const prev = document.querySelector('.features__button--prev');
-    const next = document.querySelector('.features__button--next');
+    const prev = document.querySelector('.footer__button--prev');
+    const next = document.querySelector('.footer__button--next');
 
     prev.addEventListener('click', () => {
-        $('.features__slider').slick('slickPrev');
+        $('.footer__slider').slick('slickPrev');
     });
 
     next.addEventListener('click', () => {
-        $('.features__slider').slick('slickNext');
+        $('.footer__slider').slick('slickNext');
     });
 }

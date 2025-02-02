@@ -13,6 +13,7 @@
     }
 
     &__marker {
+        position: relative;
         width: 36px;
         height: 36px;
         background-color: $purple;
@@ -21,6 +22,18 @@
         background-position: center;
         background-size: 16px 16px;
         background-repeat: no-repeat;
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: -4px;
+            left: -5px;
+            width: 44px;
+            height: 11px;
+            background-color: $gray-medium;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
 
         &--shop {
             background-image: url('../images/shop.svg');
@@ -36,6 +49,22 @@
 
         &--main {
             background-image: url('../images/main-pin.svg');
+            background-size: 9px 29px;
+
+            &::before {
+                bottom: -10px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: -18px;
+                transform: translateX(-50%);
+                border-width: 10px;
+                border-style: solid;
+                border-color: $purple transparent transparent transparent;
+            }
         }
 
         &--child {
@@ -98,8 +127,22 @@
             row-gap: 12px;
         }
 
+        &__filter {
+            cursor: pointer;
+            transition: color $transition;
+
+            &:hover {
+                color: $purple;
+            }
+
+            &:active {
+                opacity: $opacity;
+            }
+        }
+
         &__map {
             width: 100%;
+            cursor: pointer;
         }
     }
 
